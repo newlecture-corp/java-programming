@@ -2,17 +2,10 @@
 
 자바 프로그래밍 강의 예제입니다.
 
-## Folder Structure
+## 이 강의 영상의 플레이 리스트
+https://www.youtube.com/watch?v=CDEH5Pshu5I&list=PLq8wAnVUcTFVumZtWpBeZgK3iDEXmiMA1
 
-The workspace contains two folders by default, where:
+## 새로운 강의 속식
+뉴렉처 사이트(https://www.newlecture.com)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
