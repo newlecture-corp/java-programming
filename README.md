@@ -2,10 +2,10 @@
 
 자바 프로그래밍 강의 예제입니다.
 
-## 이 강의 영상의 플레이 리스트
+## 이 강의의 플레이 리스트
 https://www.youtube.com/watch?v=CDEH5Pshu5I&list=PLq8wAnVUcTFVumZtWpBeZgK3iDEXmiMA1
 
-## 새로운 강의 속식
+## 새로운 강의 소식
 뉴렉처 사이트(https://www.newlecture.com)
 
 
