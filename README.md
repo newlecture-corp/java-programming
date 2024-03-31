@@ -1,6 +1,6 @@
-## Getting Started
+## 2025년 뉴렉처 Again 자바 프로그래밍 강의 예제
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+자바 프로그래밍 강의 예제입니다.
 
 ## Folder Structure
 
