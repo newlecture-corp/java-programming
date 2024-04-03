@@ -13,18 +13,31 @@ public class App {
         FileOutputStream fos = new FileOutputStream("res/kors.out");
         PrintStream out = new PrintStream(fos);
 
-        while(scan.hasNextInt())
+        while(scan.hasNextLine())
         {
-            int kor = scan.nextInt(); // 85                
+            String line = scan.nextLine(); // 85  
+            int kor = 0;
+            if(isNumeric(line)){
+                kor = Integer.parseInt(line);              
+            }
             out.print(kor);
 
-            if(scan.hasNextInt()) // 마지막이 아닐 때만
-                out.print(" ");
+            if(scan.hasNextLine()) // 마지막이 아닐 때만
+                out.println();
         }
         
         scan.close();
         fis.close();
         out.close();
         fos.close();
+    }
+
+    public static boolean isNumeric(String str) {
+        try {
+            Double.parseDouble(str);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 }
