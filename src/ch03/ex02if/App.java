@@ -12,7 +12,7 @@ public class App {
         Scanner scan = new Scanner(fis);
         FileOutputStream fos = new FileOutputStream("res/kors.out");
         PrintStream out = new PrintStream(fos);
-
+        
         while(scan.hasNextLine())
         {
             String line = scan.nextLine(); // 85  
