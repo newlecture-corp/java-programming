@@ -7,14 +7,20 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws IOException {
         int count = 0;
+        int numberCount = 0;
+        int nanCount = 0;
         {
             FileInputStream fis = new FileInputStream("res/kors.data");        
             Scanner scan = new Scanner(fis);
                     
             while(scan.hasNextLine())
             {
-                scan.nextLine(); // 85  
+                String line = scan.nextLine(); // 85  
                 count++;
+                if(isNumeric(line))
+                    numberCount++;
+                if(!isNumeric(line))
+                    nanCount++;
             }
             
             scan.close();
@@ -22,6 +28,8 @@ public class App {
         }
 
         System.out.printf("count:%d\n", count);
+        System.out.printf("numberCount:%d\n", numberCount);
+        System.out.printf("nanCount:%d\n", nanCount);
     }
 
     public static boolean isNumeric(String str) {
