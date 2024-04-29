@@ -44,9 +44,8 @@ public class App {
                 menu = Integer.parseInt(scan.nextLine());
             }
 
-            // Test Score List =============================================
-            if(menu == 1)
-            {
+            // Test Score List
+            if(menu == 1){
                 {
                     clear();
                     System.out.println("┌───────────────────────────────┐");
@@ -90,9 +89,8 @@ public class App {
                 }
             }
 
-            // Test Score Input ==================================================
-            else if(menu == 2)
-            {
+            // Test Score Input
+            else if(menu==2){
                 {
                     clear();
                     System.out.println("┌───────────────────────────────┐");
@@ -150,31 +148,36 @@ public class App {
                     scan.nextLine();
                 }
             }
-            else if(menu == 3)
-                break;
-            else
-            {
+            else if(menu==3){
                 clear();
                 System.out.println("┌───────────────────────────────┐");
-                System.out.println("│              Error            │");
+                System.out.println("│             Bye~~             │");
                 System.out.println("└───────────────────────────────┘");
                 System.out.println();
-                System.out.println("""
-                    Value out of range. 
-                    Please select a valid option 
-                    from the menu
-                        """);
-
-                System.out.println("─────────────────────────────────");
-                System.out.println("Press any Key to Continue>");
-
-                Scanner scan = new Scanner(System.in);
-                scan.nextLine();
+                break;
             }
-            
-        }
+            else
+            {
+                {
+                    clear();
+                    System.out.println("┌───────────────────────────────┐");
+                    System.out.println("│              Error            │");
+                    System.out.println("└───────────────────────────────┘");
+                    System.out.println();
+                    System.out.println("""
+                        Value out of range. 
+                        Please select a valid option from the menu                
+                            """);
+                }
+                {
+                    System.out.println("─────────────────────────────────");
+                    System.out.println("Press any Key to Continue>");
 
-        System.out.println("Bye~");
+                    Scanner scan = new Scanner(System.in);
+                    scan.nextLine();
+                }
+            }
+        }
 
 
     }
