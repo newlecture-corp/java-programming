@@ -26,6 +26,7 @@ public class App {
             scan.nextLine();
         }
 
+        EXIT:
         while(true){
             // input menu
             int menu;
@@ -157,7 +158,7 @@ public class App {
                     System.out.println("│             Bye~~             │");
                     System.out.println("└───────────────────────────────┘");
                     System.out.println();
-                    break;
+                    break EXIT;
                 }
                 default:
                 {
