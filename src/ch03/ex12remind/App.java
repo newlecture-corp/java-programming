@@ -1,13 +1,39 @@
 package ch03.ex12remind;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintStream;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws IOException {
         
         // filtering, res/remind.data->res/valid.data
         {
+            FileInputStream fis = new FileInputStream("res/remind.data"); 
+            FileOutputStream fos = new FileOutputStream("res/valid.data");       
+            Scanner scan = new Scanner(fis);
+            PrintStream out = new PrintStream(fos);
+                    
+            while(scan.hasNextLine())
+            {
+                String line = scan.nextLine(); // 85  
+                
+                if(isNumeric(line)){
+                    // System.out.println(line);
+                    out.print(line);
+
+                    if(scan.hasNextLine())
+                        out.println();
+
+                }                
+            }
             
+            scan.close();
+            fis.close();   
+            out.close();
+            fos.close();    
 
         }
 
@@ -17,7 +43,7 @@ public class App {
         }
 
         // reducing : count, res/valid.data
-        int count = 0;
+        int count = 3;
         {
             // 코드를 작성하세요.
             
@@ -26,7 +52,7 @@ public class App {
         }
 
         // reducing : total, res/valid.data
-        int total = 0;
+        int total = 10;
         {
             // 코드를 작성하세요.
             
@@ -38,7 +64,7 @@ public class App {
         {
             double avg = 0;
             // 코드를 작성하세요.
-                       
+            avg = total / (double)count;
             
             System.out.printf("avg is %6.2f\n",avg);
         }
