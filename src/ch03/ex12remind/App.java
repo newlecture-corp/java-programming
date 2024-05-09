@@ -39,23 +39,77 @@ public class App {
 
         // mapping, res/valid.data->grade.data
         {
+            FileInputStream fis = new FileInputStream("res/valid.data"); 
+            FileOutputStream fos = new FileOutputStream("res/grade.data");       
+            Scanner scan = new Scanner(fis);
+            PrintStream out = new PrintStream(fos);
+                    
+            while(scan.hasNextLine())
+            {
+                String line = scan.nextLine(); // 85  
+                
+                int score = Integer.parseInt(line);
 
+                if(score == 100)
+                    out.print("A+");
+                else if(90 <= score && score <= 99)
+                    out.print("A");
+                else if(80 <= score && score <= 89)
+                    out.print("B");
+                else if(70 <= score && score <= 79)
+                    out.print("C");
+                else if(60 <= score && score <= 69)
+                    out.print("D");
+                else
+                    out.print("F");
+                
+                if(scan.hasNextLine())
+                    out.println();
+                    
+            }
+            
+            scan.close();
+            fis.close();   
+            out.close();
+            fos.close();
         }
 
         // reducing : count, res/valid.data
-        int count = 3;
+        int count = 0;
         {
             // 코드를 작성하세요.
+            FileInputStream fis = new FileInputStream("res/valid.data");      
+            Scanner scan = new Scanner(fis);
+                
+            while(scan.hasNextLine())
+            {
+                scan.nextLine(); // 85  
+                            
+                count++;
+            }
             
+            scan.close();
+            fis.close();  
 
             System.out.printf("count is %d\n",count);
         }
 
         // reducing : total, res/valid.data
-        int total = 10;
+        int total = 0;
         {
             // 코드를 작성하세요.
+            FileInputStream fis = new FileInputStream("res/valid.data");      
+            Scanner scan = new Scanner(fis);
+                
+            while(scan.hasNextLine())
+            {
+                String line = scan.nextLine(); // 85  
+                            
+                total += Integer.parseInt(line);
+            }
             
+            scan.close();
+            fis.close();   
 
             System.out.printf("total is %d\n",total);
         }
