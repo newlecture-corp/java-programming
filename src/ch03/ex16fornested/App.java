@@ -9,7 +9,13 @@ public class App {
         System.out.println("\n-----------------------------------");
 
         for(int j=0; j<5; j++)
-            for(int i=0; i<10; i++)       
+            for(int i=0; i<10; i++)
+                System.out.printf("%d ", i+1);
+
+        System.out.println("\n-----------------------------------");
+
+        for(int j=0; j<5; j++)
+            for(int i=0; i<10-j; i++)
                 System.out.printf("%d ", i+1);
         
     }
