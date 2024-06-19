@@ -7,7 +7,6 @@ public class App {
         // int[] kors = new int[3];
         int[] kors = {3,5,6};
 
-
         // kors[0] = 3;
         // kors[1] = 50;
         // kors[2] = 50;
