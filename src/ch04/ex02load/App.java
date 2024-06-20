@@ -11,7 +11,7 @@ public class App {
         // 데이터 로드
         int[] kors = new int[18];
         int[] engs = new int[18];
-        {            
+        {
             FileInputStream fis = new FileInputStream("res/exams.csv");
             Scanner scan = new Scanner(fis);
 
@@ -37,6 +37,19 @@ public class App {
 
             scan.close();
             fis.close();
+        }
+
+        // 배열 출력
+        {
+            System.out.println(Arrays.toString(kors));
+        }
+
+        //  자리바꾸기
+        {
+             int temp;
+             temp = kors[4];
+             kors[4] = kors[5];
+             kors[5] = temp;
         }
 
         // 배열 출력
