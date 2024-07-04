@@ -44,16 +44,22 @@ public class App {
             System.out.println(Arrays.toString(kors));
         }
 
-        //  자리바꾸기
-        {
-             int temp;
-             temp = kors[4];
-             kors[4] = kors[5];
-             kors[5] = temp;
-        }
+        // for(int j=0; j<17; j++)
+        //     for(int i=0; i<17-j; i++)            
+        //         if(kors[0+i] < kors[1+i])
+        //         {
+        //             int temp;
+        //             temp = kors[0+i];
+        //             kors[0+i] = kors[1+i];
+        //             kors[1+i] = temp;
+        //         }
+
+        Arrays.sort(kors);         
+        
 
         // 배열 출력
         {
+            System.out.printf("%x\n", kors.hashCode());
             System.out.println(Arrays.toString(kors));
         }
 
